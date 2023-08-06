@@ -13,6 +13,7 @@ const EducateCard = ({ educate, index }) => {
       variants={fadeIn("down", "spring", index * 0.5, 1)}
       initial="hidden"
       whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
       className="flex flex-col max-w-[250px] justify-center items-center rounded-md bg-gradient-to-b from-white to-slate-700"
     >
       <div className="relative w-[95%] h-[95%] mt-1">

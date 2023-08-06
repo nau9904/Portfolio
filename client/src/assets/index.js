@@ -25,11 +25,13 @@ import Couse_02 from './certificate/Web Development Bootcamp.jpeg';
 
 import image_01 from './image_1.JPG';
 import image_02 from './image_2.JPG';
+import image_03 from './image_3.JPG';
 
 export {
     certificate,
     image_01,
     image_02,
+    image_03,
     Couse_01,
     Couse_02, 
     menu, 

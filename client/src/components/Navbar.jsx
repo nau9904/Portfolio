@@ -14,7 +14,7 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} z-20 bg-gradient-to-r from-sky-300 to-green-300 py-8 flex justify-center relative gap-10 w-full`}
+      className={`${styles.xPaddings} z-20 bg-gradient-to-r from-sky-300 to-green-300 py-8 flex justify-center fixed gap-10 w-full`}
     >
       <div className="flex sm:hidden">
         {navItems.map((item) => (

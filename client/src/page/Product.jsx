@@ -4,7 +4,7 @@ import { SectionWrapper } from "../hoc";
 
 import styles from "../styles";
 import { products } from "../constants";
-import { image_01 } from "../assets";
+import { image_01, image_03 } from "../assets";
 import { textVariant, fadeIn, slideIn } from "../utils/motion";
 
 const Card = ({ product, index }) => {
@@ -52,17 +52,33 @@ const Product = () => {
         <h2 className={`${styles.sectionHeadText} px-2`}>Product</h2>
       </motion.div>
 
-      <div className="flex justify-around items-center gap-10 w-full h-auto lg:flex-col">
-        <motion.div
-          variants={slideIn("left", "tween", 0.15, 1)}
-          initial="hidden"
-          whileInView="show"
-        >
-          <img
-            src={image_01}
-            className="w-[350px] h-[350px] min-w-[250px] object-cover"
-          />
-        </motion.div>
+      <div className="flex justify-around items-center gap-10 w-full h-auto lg:flex-col static">
+        <div className="min-h-[300px]">
+          <motion.div
+            variants={slideIn("left", "tween", 0.25, 1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="w-[200px] h-[200px] md:w-[150px] md:h-[150px] absolute top-[30%] left-[10%] lg:left-[20%]"
+          >
+            <img
+              src={image_01}
+              className="w-full h-full rounded-full object-cover"
+            />
+          </motion.div>
+          <motion.div
+            variants={slideIn("left", "tween", 0.15, 1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="w-[200px] h-[200px] md:w-[150px] md:h-[150px] absolute top-[50%] lg:top-[30%] left-[30%] lg:left-[60%]"
+          >
+            <img
+              src={image_03}
+              className="w-full h-full rounded-full object-cover"
+            />
+          </motion.div>
+        </div>
 
         {products.length >= 1 ? (
           <div className="flex flex-col gap">
@@ -70,7 +86,11 @@ const Product = () => {
               <Card key={product.productName} index={index} product={product} />
             ))}
           </div>
-        ) : <h1 className={`${styles.heroHeading}`}> I will update as soon as !</h1>}
+        ) : (
+          <h1 className={`${styles.heroHeading}`}>
+            I will update as soon as !
+          </h1>
+        )}
       </div>
     </>
   );
