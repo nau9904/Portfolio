@@ -4,7 +4,7 @@ import { SectionWrapper } from "../hoc";
 
 import styles from "../styles";
 import { products } from "../constants";
-import { image_01, image_03 } from "../assets";
+import { image_01, image_04 } from "../assets";
 import { textVariant, fadeIn, slideIn } from "../utils/motion";
 
 const Card = ({ product, index }) => {
@@ -74,7 +74,7 @@ const Product = () => {
             className="w-[200px] h-[200px] md:w-[150px] md:h-[150px] absolute top-[50%] lg:top-[30%] left-[30%] lg:left-[60%]"
           >
             <img
-              src={image_03}
+              src={image_04}
               className="w-full h-full rounded-full object-cover"
             />
           </motion.div>

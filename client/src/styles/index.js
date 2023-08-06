@@ -17,10 +17,10 @@ const styles = {
 
   // hero section
   heroHeading:
-    "font-light lg:text-[35px] md:text-[30px] text-[45px] lg:leading-[60px] md:leading-[50px] sm:leading-[40px] leading-[60px] text-stone-600",
+    "font-light xl:text-[45px] lg:text-[35px] md:text-[30px] sm:text-[20px] text-[60px] lg:leading-[60px] md:leading-[50px] sm:leading-[40px] leading-[80px] text-stone-600",
   heroDText:
     "md:w-[212px] sm:w-[80px] w-[60px] md:h-[108px] sm:h-[48px] h-[38px] md:border-[18px] border-[9px] rounded-r-[50px] border-white sm:mx-2 mx-[6px]",
-  paramText: "font-normal text-[15px] text-white my-5",
+  paramText: "font-normal text-[20px] md:text-[10px] text-white my-5",
   sectionHeadText:
     "text-black font-black sm:text-[20px] text-[30px]",
 };
