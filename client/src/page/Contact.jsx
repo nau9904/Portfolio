@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import emailjs from "@emailjs/browser";
+// import env from "react-dotenv";
 
 import styles from "../styles";
 import { textVariant, slideIn } from "../utils/motion";
@@ -13,9 +14,6 @@ import {
 import { useForm } from "../hook/formHook";
 import Input from "../components/Input";
 
-const Public_KEY = "gxWjkM4b7MwX8nGOq";
-const TemplateID = "template_upil34k";
-const ServiceID = "service_bkdw2l9";
 
 const Contact = () => {
   const formRef = useRef();
@@ -39,24 +37,14 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  // const handleChange = (event) => {
-  //   const { target } = event;
-  //   const { name, value } = target;
-
-  //   setForm({
-  //     ...form,
-  //     [name]: value,
-  //   });
-  // };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
 
     await emailjs
       .send(
-        ServiceID,
-        TemplateID,
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         {
           from_name: formState.inputs.name.value,
           to_name: "DUC MANH",
@@ -64,7 +52,7 @@ const Contact = () => {
           to_email: "sparrowbaby1704@gmail.com",
           message: formState.inputs.message.value,
         },
-        Public_KEY
+        import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
         () => {
