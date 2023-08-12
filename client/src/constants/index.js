@@ -103,10 +103,6 @@ export const techskills = [
     img: reactjs,
   },
   {
-    name: "redux",
-    img: redux,
-  },
-  {
     name: "tailwind",
     img: tailwind,
   },

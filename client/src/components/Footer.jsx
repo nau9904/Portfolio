@@ -29,7 +29,7 @@ const Footer = () => (
               </p>
               <p className="font-normal text-[14px] text-white">
                 {" "}
-                sparrowbaby1704@gmail.com
+                nguyenducmanh.dev@gmail.com
               </p>
             </div>
 
